@@ -41,7 +41,7 @@ a{
 }
 .up{
     border-bottom:1px solid #f0f0f0;
-    padding-bottom:20px;
+    padding-bottom:10px;
 }
 .bell{
     width:40px;
@@ -53,12 +53,12 @@ a{
     margin-left:10px;
 }
 .spot{
-    float:right;
+    display:inline-block;
     font-size:10px;
     list-style-type:disc;
     color: #8e8e8e;
     line-height:7px;
-    margin-top:18px;
+    margin:0 10px 8px 125px;
 }
 .top{
     color:#46a3ff;
@@ -75,7 +75,7 @@ a{
     border-bottom:1px solid #f0f0f0;
     padding-bottom:20px;
 }
-.agent{
+.agent-one{
     width:200px;
     border-top-left-radius:15px;
     background-color:#00caca;
@@ -95,7 +95,7 @@ a{
     border-top-right-radius:15px;
     border-bottom-left-radius:15px;
 }
-.agent1{
+.agent-two{
     width:15px;
     border-top-left-radius:15px;
     display:inline-block;
@@ -110,11 +110,11 @@ p{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-.img{
+.img-one{
     width:25px;
-    height :25px;
+    height:25px;
 }
-.img1{
+.img-two{
     width:40px;
     height:40px;
 }
@@ -129,6 +129,6 @@ p{
     margin-left:20px;
     padding:4px;
     box-shadow:2px 2px  5px 3px #f6f6f8;}
-.button{
+.button-one{
     margin-top:10px;
 }
