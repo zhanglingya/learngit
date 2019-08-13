@@ -19,7 +19,6 @@ a {
   color: #666666;
 }
 
-
 .container {
   background: #f0f0f0;
   padding: 2%;
@@ -80,7 +79,7 @@ a {
   padding: 15px;
   text-align: right;
 }
-.dialog-left{
+.dialog-left {
   padding: 10px;
 }
 .dialog p {
@@ -126,9 +125,7 @@ p {
   padding: 6px;
   box-shadow: 2px 2px 5px 3px #d0d0d0;
 }
-.button-one,.button-two{
+.button-one,
+.button-two {
   margin-right: 20px;
 }
-
-
-
