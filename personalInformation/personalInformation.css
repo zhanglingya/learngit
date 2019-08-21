@@ -4,10 +4,7 @@ body {
   font-family: "Microsoft YaHei";
   min-width: 1400px;
 }
-ul,li,form,dl,dt,dd,div {
-  padding: 0px;
-  margin: 0px;
-}
+
 h1,h2,h3,h4,h5,p {
   padding: 0px;
   margin: 0px;
@@ -150,31 +147,36 @@ a {
 .gender {
   width: 30px;
   height: 30px;
-  float: left;
 }
 .number-middle,
-.number-right {
-  float: left;
+.number-right,.picture {
   font-size: 30px;
+  flex-grow: 1;
+  text-align: center;
 }
 .number-middle {
   color: #ffffff;
   border-left: 1px solid #9d9d9d;
-  padding-left: 20px;
+  
 }
 .number-right {
   color: rgb(95,194,253);
   border-left: 1px solid #9d9d9d;
-  padding-left: 20px;
 }
 .basic {
-  float: left;
+  flex-grow: 1;
+  text-align: center;
   font-size: 6px;
   margin-bottom: 20px;
 }
+.basic-left{
+  margin-right:10px;
+}
+.basic-middle{
+  margin-right:10px;
+}
 .information-two {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 15px;
 }
 .information-three {
