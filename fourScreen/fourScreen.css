@@ -114,9 +114,11 @@ p {
 }
 .button-box {
   list-style: none;
-  text-align: center;
   margin: 20px auto;
   font-size: 0;
+  display: flex;
+  justify-content: center;
+  align-items:  center;
 }
 .push {
   display: inline-block;
