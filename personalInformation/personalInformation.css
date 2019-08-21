@@ -508,7 +508,7 @@ a {
   padding-left: 20px;
   text-align: center;
 }
-.personnel-title,.personnel-index{
+.personnel-title{
   margin-bottom: 40px;
 }
 .personnel-rate,
@@ -521,15 +521,15 @@ a {
 .days {
   font-size: 30px;
   color: rgb(95,194,253);
+  margin-bottom: 19px;
 }
 .personnel-index {
   font-size: 12px;
   color: #bebebe;
+  margin:19px 0 40px 0;
   
 }
-.days,.personnel-rate,.hours-rate{
-  margin-bottom: 19px;
-}
+
 .personnel-rate p,
 .hours-rate p {
   font-size: 20px;
