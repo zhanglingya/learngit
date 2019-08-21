@@ -11,18 +11,25 @@
 <body>
     <div class="container">
         <!--导航栏-->
-        <div class="nabigation">
+        <div class="navigation">
             <!--三条横线-->
-            <div class="topuser menu">
+            <div class="menu">
                 <div class="menu-icon"></div>
             </div>
             <!--山海系统-->
-            <div class="topuser system">山海系统</div>
+            <div class="system">山海系统</div>
             <!--菜单按钮-->
-            <div class="topuser menu-button">
-                主页&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;派米互联&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;郭满</div>
+            <div>
+                <ul class="menu-button">
+                    <li>主页</li>
+                    <li>&nbsp;&nbsp;/&nbsp;&nbsp;</li>
+                    <li>派米互联</li>
+                    <li>&nbsp;&nbsp;/&nbsp;&nbsp;</li>
+                    <li>郭满</li>
+                </ul>
+            </div>
             <!--用户名-->
-            <div class="topuser menu-username">UserName</div>
+            <div class="menu-username">UserName</div>
         </div>
 
         <!--总的信息内容区域-->
@@ -44,23 +51,27 @@
                     <p>郭满</p>
                 </div>
                 <div class="information-two">
-                    <div class="picture"><img src="asset/icon_female.png" class="gender"></div>
-                    <div class="number-middle">
-                        <p>32</p>
+                    <div class="information-left">
+                        <div class="picture"><img src="asset/icon_female.png" class="gender"></div>
+                        <div class="basic basic-left">
+                            <p>性别</p>
+                        </div>
                     </div>
-                    <div class="number-right">
-                        <p>86</p>
+                    <div class="information-middle">
+                        <div class="number-middle">
+                            <p>32</p>
+                        </div>
+                        <div class="basic basic-middle">
+                            <p>年龄</p>
+                        </div>
                     </div>
-                </div>
-                <div class="information-three">
-                    <div class="basic basic-left">
-                        <p>性别</p>
-                    </div>
-                    <div class="basic basic-middle">
-                        <p>年龄</p>
-                    </div>
-                    <div class="basic basic-right">
-                        <p>评分</p>
+                    <div class="information-right">
+                        <div class="number-right">
+                            <p>86</p>
+                        </div>
+                        <div class="basic basic-right">
+                            <p>评分</p>
+                        </div>
                     </div>
                 </div>
                 <div class="information-four">
@@ -159,11 +170,16 @@
                         </div>
                         <div class="market-content">
                             <div class="market-percent">
-                                <div class="percent-left">
-                                    <p class="percent-main">0%</p>
+                                <div class="percent-main">
+                                    <p>0%</p>
                                 </div>
-                                <div class="percent-right">
-                                    <p class="percent-main">16.4%</p>
+                                <div class="market-left">
+                                    <p>营销转化率</p>
+                                </div>
+                            </div>
+                            <div class="market-rate">
+                                <div class="percent-main">
+                                    <p>16.4%</p>
                                     <div class="circle-left1">
                                         <div class="left-box1"></div>
                                     </div>
@@ -171,12 +187,7 @@
                                         <div class="right-box1"></div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="market-rate">
-                                <div>
-                                    <p>营销转化率</p>
-                                </div>
-                                <div>
+                                <div class="market-right">
                                     <p>话务营销成功率</p>
                                 </div>
                             </div>
@@ -190,62 +201,69 @@
                     </div>
                     <div class="quality-percent">
                         <div class="percent-one">
-                            <p class="percent-main">0%</p>
+                                <p class="percent-main">0%</p>
+                            <div class="quality-index qualified">
+                                <p>质检合格率</p>
+                            </div>
                         </div>
                         <div class="percent-two">
-                            <p class="percent-main">46.5%</p>
-                            <div class="circle-left1">
-                                <div class="left-box2"></div>
+                            <div class="percent-main">
+                                <p>46.5%</p>
+                                <div class="circle-left1">
+                                    <div class="left-box2"></div>
+                                </div>
+                                <div class="circle-right1">
+                                    <div class="right-box2"></div>
+                                </div>
                             </div>
-                            <div class="circle-right1">
-                                <div class="right-box2"></div>
+                            <div class="quality-index average">
+                                <p>质检均分</p>
                             </div>
                         </div>
                         <div class="percent-three">
-                            <p class="percent-main">27.5%</p>
-                            <div class="circle-left1">
-                                <div class="left-box3"></div>
+                            <div class="percent-main">
+                                <p>27.5%</p>
+                                <div class="circle-left1">
+                                    <div class="left-box3"></div>
+                                </div>
+                                <div class="circle-right1">
+                                    <div class="right-box3"></div>
+                                </div>
                             </div>
-                            <div class="circle-right1">
-                                <div class="right-box3"></div>
+                            <div class="quality-index recording">
+                                <p>优秀录音比例</p>
                             </div>
                         </div>
                         <div class="percent-four">
-                            <p class="percent-main">19.8%</p>
-                            <div class="circle-left1">
-                                <div class="left-box4"></div>
+                            <div class="percent-main">
+                                <p>19.8%</p>
+                                <div class="circle-left1">
+                                    <div class="left-box4"></div>
+                                </div>
+                                <div class="circle-right1">
+                                    <div class="right-box4"></div>
+                                </div>
                             </div>
-                            <div class="circle-right1">
-                                <div class="right-box4"></div>
+                            <div class="quality-index complaint">
+                                <p>投诉率</p>
                             </div>
                         </div>
                         <div class="percent-five">
-                            <p class="percent-main">10.8%</p>
-                            <div class="circle-left1">
-                                <div class="left-box5"></div>
+                            <div class="percent-main">
+                                <p>10.8%</p>
+                                <div class="circle-left1">
+                                    <div class="left-box5"></div>
+                                </div>
+                                <div class="circle-right1">
+                                    <div class="right-box5"></div>
+                                </div>
                             </div>
-                            <div class="circle-right1">
-                                <div class="right-box5"></div>
+                            <div class="quality-index duty">
+                                <p>有责投诉率</p>
                             </div>
                         </div>
                     </div>
-                    <div class="quality-rate">
-                        <div class="qualified">
-                            <p>质检合格率</p>
-                        </div>
-                        <div class="average">
-                            <p>质检均分</p>
-                        </div>
-                        <div class="recording">
-                            <p>优秀录音比例</p>
-                        </div>
-                        <div class="complaint">
-                            <p>投诉率</p>
-                        </div>
-                        <div class="duty">
-                            <p>有责投诉率</p>
-                        </div>
-                    </div>
+
 
                 </div>
             </div>
@@ -261,8 +279,8 @@
                     <div class="personnel personnel-index">
                         <p>人员稳定性</p>
                     </div>
-                    <div class="personnel personnel-rate">
-                        <p class="percent-main">43.9%</p>
+                    <div class="personnel percent-main personnel-rate">
+                        <p>43.9%</p>
                         <div class="circle-left1">
                             <div class="left-box6"></div>
                         </div>
@@ -273,8 +291,8 @@
                     <div class="personnel personnel-index">
                         <p>人员利用率</p>
                     </div>
-                    <div class="personnel hours-rate">
-                        <p class="percent-main">96.9%</p>
+                    <div class="personnel percent-main hours-rate">
+                        <p>96.9%</p>
                         <div class="circle-left1">
                             <div class="left-box7"></div>
                         </div>
