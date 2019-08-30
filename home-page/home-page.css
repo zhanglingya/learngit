@@ -94,6 +94,9 @@ a {
 .container .navigation .main .menu-middle .product {
   position: relative;
 }
+.container .navigation .main .menu-middle .product a:hover {
+  color: #3981f7;
+}
 .container .navigation .main .menu-middle .product .dropdown-product {
   display: none;
   position: absolute;
@@ -170,6 +173,9 @@ a {
 }
 .container .navigation .main .menu-middle .resources {
   position: relative;
+}
+.container .navigation .main .menu-middle .resources a:hover {
+  color: #3981f7;
 }
 .container .navigation .main .menu-middle .resources .dropdown-resources {
   display: none;

@@ -36,7 +36,7 @@ a {
 @line-height:1;
 
 .container {
-  min-width: @width-fixed;
+  min-width: @width-fixed; 
   /*导航栏*/
   & .navigation {
     width: @percent;
@@ -107,6 +107,9 @@ a {
         }
         & .product {
           position: relative;
+          & a:hover {
+            color: @color-hover;
+          }
           & .dropdown-product {
             display: none;
             position: absolute;
@@ -183,6 +186,9 @@ a {
         }
         & .resources {
           position: relative;
+          & a:hover {
+            color: @color-hover;
+          }
           & .dropdown-resources {
             display: none;
             position: absolute;
