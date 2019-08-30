@@ -22,14 +22,14 @@ a {
   /*整体内容区域*/
   /*底部*/
 }
-.container a:hover {
-  color: #3981f7;
-}
 .container .navigation {
   width: 100%;
   position: fixed;
   z-index: 2;
   background-color: #0b102d;
+}
+.container .navigation a:hover {
+  color: #3981f7;
 }
 .container .navigation .main {
   width: 1280px;
@@ -516,6 +516,9 @@ a {
 }
 .container .bottom .bottom-main .bottom-body {
   margin-top: 60px;
+}
+.container .bottom .bottom-main .bottom-body a:hover {
+  color: #3981f7;
 }
 .container .bottom .bottom-main .bottom-body .bottom-title {
   font-size: 18px;
