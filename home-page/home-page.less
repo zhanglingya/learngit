@@ -283,22 +283,22 @@ a {
   width: @width-fixed;
   margin: @spacing*0 auto;
   margin-top: 6 * @spacing;
-    .up {
-      color: rgb(82, 90, 108);
-      font-size: 25 * @font-size;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: @font-weight;
-    }
-    .down {
-      color: rgb(85, 88, 103);
-      font-size: 15 * @font-size;
-      margin-top: @spacing;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .up {
+    color: rgb(82, 90, 108);
+    font-size: 25 * @font-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: @font-weight;
+  }
+  .down {
+    color: rgb(85, 88, 103);
+    font-size: 15 * @font-size;
+    margin-top: @spacing;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   /*六个模块*/
   .modules {
     margin: @spacing*3 @spacing*5x;
@@ -341,22 +341,22 @@ a {
   width: @width-fixed;
   margin: @spacing*0 auto;
   margin-top: 6 * @spacing;
-    .up {
-      color: rgb(82, 90, 108);
-      font-size: 25 * @font-size;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: @font-weight;
-    }
-    .down {
-      color: rgb(85, 88, 103);
-      font-size: 15 * @font-size;
-      margin-top: @spacing;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .up {
+    color: rgb(82, 90, 108);
+    font-size: 25 * @font-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: @font-weight;
+  }
+  .down {
+    color: rgb(85, 88, 103);
+    font-size: 15 * @font-size;
+    margin-top: @spacing;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   /*6个活动模块*/
   .professional {
     width: @width-fixed;
@@ -541,6 +541,7 @@ a {
     margin-top: 4 * @spacing;
     .line {
       width: @width-fixed;
+      text-align: center;
       font-size: 12 * @font-size;
       height: 50 * @height;
       border-spacing: 0 * @border;
@@ -556,14 +557,12 @@ a {
         color: rgb(123, 129, 143);
       }
       tr:nth-child(2n) {
-        text-align: center;
         &:hover {
           background-color: rgb(234, 247, 254);
           cursor: pointer;
         }
       }
       tr:nth-child(2n-1) {
-        text-align: center;
         background-color: rgb(248, 248, 249);
         &:hover {
           background-color: rgb(234, 247, 254);
@@ -573,9 +572,6 @@ a {
       .title td {
         color: rgb(85, 93, 111);
         font-weight: @font-weight;
-        width: @percent / 2;
-        text-align: center;
-        vertical-align: middle;
         border-top: @border solid rgb(236, 236, 236);
         background-color: rgb(248, 248, 249);
       }

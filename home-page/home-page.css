@@ -529,6 +529,7 @@ a {
 }
 .promoter .list .line {
   width: 1280px;
+  text-align: center;
   font-size: 12px;
   height: 50px;
   border-spacing: 0px;
@@ -544,15 +545,11 @@ a {
   border-top: 1px solid #ececec;
   color: #7b818f;
 }
-.promoter .list .line tr:nth-child(2n) {
-  text-align: center;
-}
 .promoter .list .line tr:nth-child(2n):hover {
   background-color: #eaf7fe;
   cursor: pointer;
 }
 .promoter .list .line tr:nth-child(2n-1) {
-  text-align: center;
   background-color: #f8f8f9;
 }
 .promoter .list .line tr:nth-child(2n-1):hover {
@@ -562,9 +559,6 @@ a {
 .promoter .list .line .title td {
   color: #555d6f;
   font-weight: bold;
-  width: 50%;
-  text-align: center;
-  vertical-align: middle;
   border-top: 1px solid #ececec;
   background-color: #f8f8f9;
 }
