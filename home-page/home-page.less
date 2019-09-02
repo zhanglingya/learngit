@@ -33,72 +33,86 @@ a {
 @spacing: 10px;
 @font-weight: bold;
 @direction: 1px;
-@line-height:1;
+@line-height: 1;
 
 .container {
-  min-width: @width-fixed; 
+  min-width: @width-fixed;
   /*导航栏*/
   & .navigation {
     width: @percent;
+    height: 60*@height;
     position: fixed;
     z-index: @z-index*2;
     background-color: @bgcolor-nav;
     & a:hover {
       color: @color-hover;
+      cursor: pointer;
     }
     & .main {
       width: @width-fixed;
-      margin: 0 * @spacing auto;
+      height: 60*@height;
+      margin:0*@spacing auto;
       display: @display-flex;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
       & .menu {
         list-style-type: none;
+        height: 60*@height;
       }
       & .logo {
         width: 180 * @width;
         height: 45 * @height;
+        display: flex;
+        align-items: center;
       }
       & .menu-middle {
-        width: @percent*0.4;
         display: @display-flex;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
         padding: 0 * @spacing;
-        margin: 0 * @spacing;
+        margin:0 5*@spacing;
         & .menu-botton {
           font-size: 16 * @font-size;
           color: @color-white;
-          & .one {
-            display: @display-flex; 
-            &:hover .triangle::after {
-              content: "";
-              width: 6*@width;
-              height: 6*@height;
-              border-right: 2*@border solid @color-hover;
-              border-top: 2*@border solid @color-hover;
-              transform: rotate(135deg);
+          & .triangle-main {
+            height: 60*@height;
+            padding: 0 4*@spacing;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & .one {
+              display: @display-flex;
+              &:hover .triangle::after {
+                content: "";
+                width: 6 * @width;
+                height: 6 * @height;
+                border-right: 2 * @border solid @color-hover;
+                border-top: 2 * @border solid @color-hover;
+                transform: rotate(135deg);
+                cursor: pointer;
+              }
+              & .triangle::after {
+                content: "";
+                width: 6 * @width;
+                height: 6 * @height;
+                border-right: 2 * @border solid @color-white;
+                border-top: 2 * @border solid @color-white;
+                transform: rotate(135deg);
+                -webkit-transform: rotate(135deg);
+                margin-bottom: @spacing;
+                margin-left: @spacing;
+                display: inline-block;
+                vertical-align: middle;
+              }
             }
-            & .triangle::after {
-              content: "";
-              width: 6*@width;
-              height: 6*@height;
-              border-right: 2*@border solid @color-white;
-              border-top: 2*@border solid @color-white;
-              transform: rotate(135deg);
-              -webkit-transform: rotate(135deg);
-              margin-bottom: @spacing;
-              margin-left: @spacing;
-              display: inline-block;
-              vertical-align: middle;
-            }
-            
           }
+
           & .dropdown-title {
             padding-bottom: @spacing;
             border-bottom: @border solid rgb(95, 95, 95);
           }
           & .dropdown-content {
-            font-size: 14*@font-size;
+            font-size: 14 * @font-size;
             margin-top: @spacing;
             & a {
               color: rgb(208, 208, 208);
@@ -110,45 +124,49 @@ a {
           & a:hover {
             color: @color-hover;
           }
-          & .dropdown-product {
-            display: none;
-            position: absolute;
-            background-color: rgba(11, 16, 45, 0.8);
-            min-width: 500px;
-            height: 220px;
-            padding: 40px 20px;
-            border-radius: 5px;
-            top: 52px;
-            left: -250px;
-            & .product-main {
-              display: @display-flex;
-              flex: 1;
-              flex-wrap: wrap;
-              & .product-up,.product-down{
-                flex: 0 0 32%;
-                margin-right: @spacing*0.5;
-              }
-              & .product-down{
-                margin-top: @spacing*2;
-              }
-            }
-            &:before{
-              content: "";
+            & .dropdown-product {
               position: absolute;
-              bottom: @percent;
-              right: 250*@direction;
-              width: 0*@width;
-              height: 0*@height;
-              border-width: 10*@border;
-              border-style: solid;
-              border-color: transparent;
-              border-bottom-width: 16*@border;
-              border-bottom-color: currentColor;
-              color: rgb(11, 16, 45, 0.8);
-            }
+              min-width: 500*@width;
+              height: 240@height;
+              padding: 2*@spacing;
+              top: 55*@direction;
+              left: -200*@direction; 
+              display: none;
+              & .product-main {
+                display: @display-flex;
+                background-color: rgba(11, 16, 45, 0.9);
+                flex: 1;
+                flex-wrap: wrap;
+                padding:2*@spacing;
+                border-radius: 5px;
+                & .product-up,
+                .product-down {
+                  flex: 0 0 32%;
+                  margin-right: @spacing*0.5;
+                }
+                & .product-down {
+                  margin-top: @spacing*2;
+                }
+                &:before {
+                  content: "";
+                  top:-5*@direction;
+                  position: absolute;
+                  bottom: @percent;
+                  right: 250 * @direction;
+                  width: 0 * @width;
+                  height: 0 * @height;
+                  border-width: 10 * @border;
+                  border-style: solid;
+                  border-color: transparent;
+                  border-bottom-width: 16 * @border;
+                  border-bottom-color: currentColor;
+                  color: rgba(11, 16, 45, 0.9);
+                }
+              }           
           }
           &:hover .dropdown-product {
             display: block;
+            cursor: pointer;
           }
         }
         & .solution {
@@ -156,86 +174,105 @@ a {
           & .dropdown-solution {
             display: none;
             position: absolute;
-            background-color: rgba(11, 16, 45, 0.8);
-            min-width: 150*@width;
-            border-radius: 5*@border;
-            padding: 2*@spacing;
-            top: 52*@direction;
-            left: -70*@direction;
-            & .solution-down {
-              margin-top: @spacing*2;
+            min-width: 150 * @width;          
+            padding: 2 * @spacing;
+            top: 52 * @direction;
+            left: -50 * @direction;
+            & .solution-main{
+                display: @display-flex;
+                background-color: rgba(11, 16, 45, 0.9);
+                border-radius: 5 * @border;
+                width: 150*@width;
+                flex: 1;
+                flex-wrap: wrap;
+                padding:2*@spacing;
+                border-radius: 5px;
+              & .solution-down {
+                margin-top: @spacing*2;
+              }
+              &:before {
+                content: "";
+                top:-5*@direction;
+                position: absolute;
+                bottom: @percent;
+                right: 100 * @direction;
+                width: 0 * @width;
+                height: 0 * @height;
+                border-width: 10 * @border;
+                border-style: solid;
+                border-color: transparent;
+                border-bottom-width: 16 * @border;
+                border-bottom-color: currentColor;
+                color: rgba(11, 16, 45, 0.9);
+              }
             }
-            &:before{
-              content: "";
-              position: absolute;
-              bottom: @percent;
-              right: 80*@direction;
-              width: 0*@width;
-              height: 0*@height;
-              border-width: 10*@border;
-              border-style: solid;
-              border-color: transparent;
-              border-bottom-width: 16*@border;
-              border-bottom-color: currentColor;
-              color: rgb(11, 16, 45, 0.8);
-            }
+           
+           
           }
           &:hover .dropdown-solution {
             display: block;
+            cursor: pointer;
           }
         }
         & .resources {
           position: relative;
           & a:hover {
             color: @color-hover;
+            cursor: pointer;
           }
           & .dropdown-resources {
             display: none;
             position: absolute;
-            background-color: rgba(11, 16, 45, 0.8);
-            min-width: 300*@width;
-            height: 120*@height;
-            padding: 2*@spacing;
-            border-radius: 5*@border;
-            top: 52*@direction;
-            left: -150*@direction;
+            min-width: 300 * @width;
+            height: 120 * @height;
+            padding: 2 * @spacing;
+            top: 52 * @direction;
+              left: -100 * @direction;
             & .resources-main {
               display: @display-flex;
               justify-content: space-around;
-              & .document,.sdk {
-                width: 120*@width;       
+              background-color: rgba(11, 16, 45, 0.9);
+              border-radius: 5 * @border;
+              padding:2*@spacing;
+              & .document,
+              .sdk {
+                width: 120 * @width;
+              }
+              &:before {
+                content: "";
+                top:-5*@direction;
+                position: absolute;
+                bottom: @percent;
+                right: 150 * @direction;
+                width: 0 * @width;
+                height: 0 * @height;
+                border-width: 10 * @border;
+                border-style: solid;
+                border-color: transparent;
+                border-bottom-width: 16 * @border;
+                border-bottom-color: currentColor;
+                color: rgba(11, 16, 45, 0.9);
               }
             }
-            &:before {
-              content: "";
-              position: absolute;
-              bottom: @percent;
-              right: 150*@direction;
-              width: 0*@width;
-              height: 0*@height;
-              border-width: 10*@border;
-              border-style: solid;
-              border-color: transparent;
-              border-bottom-width: 16*@border;
-              border-bottom-color: currentColor;
-              color: rgb(11, 16, 45, 0.8);
-            }
+           
           }
           &:hover .dropdown-resources {
             display: block;
+            cursor: pointer;
           }
         }
-        
       }
       & .logon {
-        font-size: 16*@font-size;
+        font-size: 16 * @font-size;
         color: @color-white;
+        display: flex;
+        align-items: center;
         & span {
           color: rgb(131, 134, 150);
         }
       }
     }
-    & li a{
+    & li a {
       color: @color-white;
     }
   }
@@ -257,7 +294,9 @@ a {
       & .sadf-up {
         color: rgb(82, 90, 108);
         font-size: 25 * @font-size;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         & p {
           font-weight: @font-weight;
         }
@@ -266,7 +305,9 @@ a {
         color: rgb(85, 88, 103);
         font-size: 15 * @font-size;
         margin-top: @spacing;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
     /*六个模块*/
@@ -286,9 +327,11 @@ a {
           padding: 4 * @spacing 2 * @spacing;
           display: @display-flex;
           & .modules-img {
-            width: 40 * @width;
+            width: 32 * @width;
             height: 32 * @height;
             margin-right: @spacing;
+            margin-top: 0.16 * @spacing;
+            opacity: 0.7;
           }
           & .modules-title {
             color: rgb(82, 90, 108);
@@ -299,7 +342,7 @@ a {
             color: rgb(108, 114, 130);
             font-size: 14 * @font-size;
             margin-top: @spacing;
-            line-height: 2*@line-height;
+            line-height: 2 * @line-height;
           }
         }
       }
@@ -322,6 +365,8 @@ a {
         border: 1px solid @color-white;
         overflow: hidden;
         &:hover {
+          cursor: pointer;
+          background-color: rgba(60, 111, 213, 0.7);
           & .professional-img {
             transform: translate(0, -35px);
             transition: all 0.3s ease 0s;
@@ -371,6 +416,7 @@ a {
         margin: 0 * @spacing auto;
         & .scene-main:hover {
           background-color: rgba(22, 33, 61, 0.8);
+          cursor: pointer;
           & .scene-content {
             display: block;
           }
@@ -441,7 +487,7 @@ a {
           font-size: 16 * @font-size;
           color: @color-white;
           margin-top: 2 * @spacing;
-          line-height: 2*@line-height;
+          line-height: 2 * @line-height;
         }
       }
     }
@@ -466,7 +512,7 @@ a {
           & .case-content {
             font-size: 14 * @font-size;
             color: rgb(109, 113, 116);
-            line-height: 2*@line-height;
+            line-height: 2 * @line-height;
             margin-top: 2 * @spacing;
             text-align: left;
           }
@@ -481,7 +527,7 @@ a {
         font-size: 12 * @font-size;
         height: 50 * @height;
         border-spacing: 0 * @border;
-        line-height: 3.5*@line-height;
+        line-height: 3.5 * @line-height;
         margin: 0 * @spacing auto;
         vertical-align: middle;
         border: @border solid rgb(236, 236, 236);
@@ -507,6 +553,7 @@ a {
           }
           &:hover {
             background-color: rgb(234, 247, 254);
+            cursor: pointer;
           }
         }
         & .line-two {
@@ -514,6 +561,7 @@ a {
           background-color: rgb(248, 248, 249);
           &:hover {
             background-color: rgb(234, 247, 254);
+            cursor: pointer;
           }
           & td {
             color: rgb(123, 129, 143);
@@ -538,6 +586,7 @@ a {
         margin-top: 6 * @spacing;
         & a:hover {
           color: @color-hover;
+          cursor: pointer;
         }
         & .bottom-title {
           font-size: 18 * @font-size;
@@ -548,7 +597,7 @@ a {
         & .bottom-content {
           font-size: 14 * @font-size;
           color: rgb(240, 240, 242);
-          line-height: 2.3*@line-height;
+          line-height: 2.3 * @line-height;
         }
       }
       & .bottom-img {
@@ -558,6 +607,4 @@ a {
       }
     }
   }
-  
 }
-
