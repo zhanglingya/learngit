@@ -1,3 +1,18 @@
+@width-fixed: 1280px;
+@percent: 100%;
+@height: 1px;
+@width: 1px;
+@border: 1px;
+@font-size: 1px;
+@display-flex: flex;
+@color-hover: rgb(57, 129, 247);
+@color-white: #ffffff;
+@z-index: 1;
+@spacing: 10px;
+@font-weight: bold;
+@direction: 1px;
+@line-height: 1;
+
 body {
   padding: 0 * @spacing;
   margin: @spacing*0 auto;
@@ -18,593 +33,631 @@ a {
   text-decoration: none;
 }
 
-@width-fixed: 1280px;
-@percent: 100%;
-@height: 1px;
-@width: 1px;
-@border: 1px;
-@font-size: 1px;
-@display-flex: flex;
-@color-hover: rgb(57, 129, 247);
-@color-white: #ffffff;
-@bgcolor-nav: rgb(11, 16, 45);
-@bgcolor-bot: #121e30;
-@z-index: 1;
-@spacing: 10px;
-@font-weight: bold;
-@direction: 1px;
-@line-height: 1;
-
-.container {
+/*导航栏*/
+.navigation {
   min-width: @width-fixed;
-  /*导航栏*/
-  & .navigation {
-    width: @percent;
-    height: 60*@height;
-    position: fixed;
-    z-index: @z-index*2;
-    background-color: @bgcolor-nav;
-    & a:hover {
-      color: @color-hover;
-      cursor: pointer;
+  width: @percent;
+  height: 60 * @height;
+  position: fixed;
+  z-index: @z-index*2;
+  background-color: rgb(11, 16, 45);
+  & a:hover {
+    color: @color-hover;
+    cursor: pointer;
+  }
+  .main {
+    width: @width-fixed;
+    height: 60 * @height;
+    margin: 0 * @spacing auto;
+    display: @display-flex;
+    align-items: center;
+    justify-content: center;
+    .menu {
+      list-style-type: none;
+      height: 60 * @height;
     }
-    & .main {
-      width: @width-fixed;
-      height: 60*@height;
-      margin:0*@spacing auto;
-      display: @display-flex;
+    .logo {
+      width: 180 * @width;
+      height: 45 * @height;
+      display: flex;
       align-items: center;
+    }
+    .middle {
+      display: @display-flex;
       justify-content: center;
-      & .menu {
-        list-style-type: none;
-        height: 60*@height;
-      }
-      & .logo {
-        width: 180 * @width;
-        height: 45 * @height;
-        display: flex;
-        align-items: center;
-      }
-      & .menu-middle {
-        display: @display-flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 * @spacing;
-        margin:0 5*@spacing;
-        & .menu-botton {
-          font-size: 16 * @font-size;
-          color: @color-white;
-          & .triangle-main {
-            height: 60*@height;
-            padding: 0 4*@spacing;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            & .one {
-              display: @display-flex;
-              &:hover .triangle::after {
-                content: "";
-                width: 6 * @width;
-                height: 6 * @height;
-                border-right: 2 * @border solid @color-hover;
-                border-top: 2 * @border solid @color-hover;
-                transform: rotate(135deg);
-                cursor: pointer;
-              }
-              & .triangle::after {
-                content: "";
-                width: 6 * @width;
-                height: 6 * @height;
-                border-right: 2 * @border solid @color-white;
-                border-top: 2 * @border solid @color-white;
-                transform: rotate(135deg);
-                -webkit-transform: rotate(135deg);
-                margin-bottom: @spacing;
-                margin-left: @spacing;
-                display: inline-block;
-                vertical-align: middle;
-              }
-            }
-          }
-
-          & .dropdown-title {
-            padding-bottom: @spacing;
-            border-bottom: @border solid rgb(95, 95, 95);
-          }
-          & .dropdown-content {
-            font-size: 14 * @font-size;
-            margin-top: @spacing;
-            & a {
-              color: rgb(208, 208, 208);
-            }
-          }
-        }
-        & .product {
-          position: relative;
-          & a:hover {
-            color: @color-hover;
-          }
-            & .dropdown-product {
-              position: absolute;
-              min-width: 500*@width;
-              height: 240@height;
-              padding: 2*@spacing;
-              top: 55*@direction;
-              left: -200*@direction; 
-              display: none;
-              & .product-main {
-                display: @display-flex;
-                background-color: rgba(11, 16, 45, 0.9);
-                flex: 1;
-                flex-wrap: wrap;
-                padding:2*@spacing;
-                border-radius: 5px;
-                & .product-up,
-                .product-down {
-                  flex: 0 0 32%;
-                  margin-right: @spacing*0.5;
-                }
-                & .product-down {
-                  margin-top: @spacing*2;
-                }
-                &:before {
-                  content: "";
-                  top:-5*@direction;
-                  position: absolute;
-                  bottom: @percent;
-                  right: 250 * @direction;
-                  width: 0 * @width;
-                  height: 0 * @height;
-                  border-width: 10 * @border;
-                  border-style: solid;
-                  border-color: transparent;
-                  border-bottom-width: 16 * @border;
-                  border-bottom-color: currentColor;
-                  color: rgba(11, 16, 45, 0.9);
-                }
-              }           
-          }
-          &:hover .dropdown-product {
-            display: block;
-            cursor: pointer;
-          }
-        }
-        & .solution {
-          position: relative;
-          & .dropdown-solution {
-            display: none;
-            position: absolute;
-            min-width: 150 * @width;          
-            padding: 2 * @spacing;
-            top: 52 * @direction;
-            left: -50 * @direction;
-            & .solution-main{
-                display: @display-flex;
-                background-color: rgba(11, 16, 45, 0.9);
-                border-radius: 5 * @border;
-                width: 150*@width;
-                flex: 1;
-                flex-wrap: wrap;
-                padding:2*@spacing;
-                border-radius: 5px;
-              & .solution-down {
-                margin-top: @spacing*2;
-              }
-              &:before {
-                content: "";
-                top:-5*@direction;
-                position: absolute;
-                bottom: @percent;
-                right: 100 * @direction;
-                width: 0 * @width;
-                height: 0 * @height;
-                border-width: 10 * @border;
-                border-style: solid;
-                border-color: transparent;
-                border-bottom-width: 16 * @border;
-                border-bottom-color: currentColor;
-                color: rgba(11, 16, 45, 0.9);
-              }
-            }
-           
-           
-          }
-          &:hover .dropdown-solution {
-            display: block;
-            cursor: pointer;
-          }
-        }
-        & .resources {
-          position: relative;
-          & a:hover {
-            color: @color-hover;
-            cursor: pointer;
-          }
-          & .dropdown-resources {
-            display: none;
-            position: absolute;
-            min-width: 300 * @width;
-            height: 120 * @height;
-            padding: 2 * @spacing;
-            top: 52 * @direction;
-              left: -100 * @direction;
-            & .resources-main {
-              display: @display-flex;
-              justify-content: space-around;
-              background-color: rgba(11, 16, 45, 0.9);
-              border-radius: 5 * @border;
-              padding:2*@spacing;
-              & .document,
-              .sdk {
-                width: 120 * @width;
-              }
-              &:before {
-                content: "";
-                top:-5*@direction;
-                position: absolute;
-                bottom: @percent;
-                right: 150 * @direction;
-                width: 0 * @width;
-                height: 0 * @height;
-                border-width: 10 * @border;
-                border-style: solid;
-                border-color: transparent;
-                border-bottom-width: 16 * @border;
-                border-bottom-color: currentColor;
-                color: rgba(11, 16, 45, 0.9);
-              }
-            }
-           
-          }
-          &:hover .dropdown-resources {
-            display: block;
-            cursor: pointer;
-          }
-        }
-      }
-      & .logon {
+      align-items: center;
+      padding: 0 * @spacing;
+      margin: 0 5 * @spacing;
+      .botton {
         font-size: 16 * @font-size;
         color: @color-white;
-        display: flex;
-        align-items: center;
-        & span {
-          color: rgb(131, 134, 150);
-        }
-      }
-    }
-    & li a {
-      color: @color-white;
-    }
-  }
-  /*整体内容区域*/
-  & .content {
-    /*动画区域*/
-    & .animation {
-      margin: @spacing*0;
-      padding: @spacing*0;
-      & .animation-img {
-        width: @percent;
-      }
-    }
-    /*文字标题区域*/
-    & .sadf {
-      width: @width-fixed;
-      margin: @spacing*0 auto;
-      margin-top: 6 * @spacing;
-      & .sadf-up {
-        color: rgb(82, 90, 108);
-        font-size: 25 * @font-size;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        & p {
-          font-weight: @font-weight;
-        }
-      }
-      & .sadf-down {
-        color: rgb(85, 88, 103);
-        font-size: 15 * @font-size;
-        margin-top: @spacing;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-    /*六个模块*/
-    & .modules {
-      margin: @spacing*3 @spacing*5x;
-      width: @width-fixed;
-      margin: 0 * @spacing auto;
-      & .modules-up,
-      .modules-down {
-        display: @display-flex;
-        justify-content: space-between;
-        margin-top: 3 * @spacing;
-        & .six-modules {
-          width: 370 * @width;
-          height: 150 * @height;
-          box-shadow: 0 0 10px rgb(230, 230, 230);
-          padding: 4 * @spacing 2 * @spacing;
-          display: @display-flex;
-          & .modules-img {
-            width: 32 * @width;
-            height: 32 * @height;
-            margin-right: @spacing;
-            margin-top: 0.16 * @spacing;
-            opacity: 0.7;
-          }
-          & .modules-title {
-            color: rgb(82, 90, 108);
-            font-size: 25 * @font-size;
-            font-weight: @font-weight;
-          }
-          & .modules-content {
-            color: rgb(108, 114, 130);
-            font-size: 14 * @font-size;
-            margin-top: @spacing;
-            line-height: 2 * @line-height;
-          }
-        }
-      }
-    }
-    /*6个活动模块*/
-    & .professional {
-      width: @width-fixed;
-      margin: 3 * @spacing auto;
-      display: @display-flex;
-      flex-wrap: wrap;
-      flex: 1;
-      & p {
-        color: @color-white;
-      }
-      & .professional-modules {
-        flex: 0 0 33%;
-        flex-wrap: wrap;
-        height: 330 * @height;
-        position: relative;
-        border: 1px solid @color-white;
-        overflow: hidden;
-        &:hover {
-          cursor: pointer;
-          background-color: rgba(60, 111, 213, 0.7);
-          & .professional-img {
-            transform: translate(0, -35px);
-            transition: all 0.3s ease 0s;
-          }
-          & .part {
-            transform: translate(0, -35px);
-            transition: all 0.3s ease 0s;
-            & .professional-content {
-              display: block;
+        .triangle {
+          height: 60 * @height;
+          padding: 0 4 * @spacing;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .head {
+            display: @display-flex;
+            &:hover .word::after {
+              content: "";
+              width: 6 * @width;
+              height: 6 * @height;
+              border-right: 2 * @border solid @color-hover;
+              border-top: 2 * @border solid @color-hover;
+              transform: rotate(135deg);
+              cursor: pointer;
+            }
+            .word::after {
+              content: "";
+              width: 6 * @width;
+              height: 6 * @height;
+              border-right: 2 * @border solid @color-white;
+              border-top: 2 * @border solid @color-white;
+              transform: rotate(135deg);
+              -webkit-transform: rotate(135deg);
+              margin-bottom: @spacing;
+              margin-left: @spacing;
+              display: inline-block;
+              vertical-align: middle;
             }
           }
         }
-        & .professional-img {
-          width: @percent;
-          position: absolute;
-          z-index: -1 * @z-index;
-          top: -20 * @direction;
+        .title {
+          padding-bottom: @spacing;
+          border-bottom: @border solid rgb(95, 95, 95);
         }
-        & .part {
-          z-index: @z-index;
-          & .professional-content {
-            display: none;
-            padding: 2 * @spacing;
-          }
-          & .professional-title {
-            font-size: 25 * @font-size;
-            text-align: center;
-            padding-top: 13 * @spacing;
-            height: 30 * @height;
+        .content {
+          font-size: 14 * @font-size;
+          margin-top: @spacing;
+          a {
+            color: rgb(208, 208, 208);
           }
         }
       }
-    }
-    /*6个图标*/
-    & .scene {
-      background-image: url(asset/application-scenarios.jpg);
-      background-repeat: no-repeat;
-      background-color: #1f3656;
-      background-position: center;
-      width: @percent;
-      height: 600 * @height;
-      margin-top: 4 * @spacing;
-      & .scene-menu {
+      .product {
         position: relative;
-        width: @width-fixed;
-        height: @percent;
-        margin: 0 * @spacing auto;
-        & .scene-main:hover {
-          background-color: rgba(22, 33, 61, 0.8);
-          cursor: pointer;
-          & .scene-content {
-            display: block;
-          }
+        & a:hover {
+          color: @color-hover;
         }
-        & .talk {
-          text-align: right;
+        .dropdown {
           position: absolute;
-          left: -70 * @direction;
-          top: 50 * @direction;
-          width: @percent / 5;
-          padding: @spacing;
-          border-radius: 10 * @border;
-        }
-        & .finance {
-          text-align: left;
-          position: absolute;
-          left: 695 * @direction;
-          top: 95 * @direction;
-          width: @percent / 5;
+          min-width: 500 * @width;
+          height: 240 @height;
           padding: 2 * @spacing;
-          border-radius: 10 * @border;
-        }
-        & .landed {
-          text-align: right;
-          position: absolute;
-          left: 830 * @direction;
-          top: 150 * @direction;
-          width: @percent / 5;
-          padding: 2 * @spacing;
-          border-radius: 10 * @border;
-        }
-        & .retail {
-          text-align: left;
-          position: absolute;
-          left: 595 * @direction;
-          top: 300 * @direction;
-          width: @percent / 5;
-          padding: 2 * @spacing;
-          border-radius: 10 * @border;
-        }
-        & .education {
-          text-align: right;
-          position: absolute;
-          left: 0 * @direction;
-          top: 395 * @direction;
-          width: @percent / 5;
-          padding: 2 * @spacing;
-          border-radius: 10 * @border;
-        }
-        .collection {
-          text-align: left;
-          position: absolute;
-          left: 965 * @direction;
-          top: 435 * @direction;
-          width: @percent / 5;
-          padding: 2 * @spacing;
-          border-radius: 10 * @border;
-        }
-        & li {
-          list-style-type: none;
-        }
-        & .scene-title {
-          color: @color-white;
-          font-size: 22 * @font-size;
-        }
-        & .scene-content {
+          top: 55 * @direction;
+          left: -200 * @direction;
           display: none;
-          font-size: 16 * @font-size;
-          color: @color-white;
-          margin-top: 2 * @spacing;
-          line-height: 2 * @line-height;
+          .part {
+            display: @display-flex;
+            background-color: rgba(11, 16, 45, 0.9);
+            flex: 1;
+            flex-wrap: wrap;
+            padding: 2 * @spacing;
+            border-radius: 5 * @border;
+            .up,
+            .down {
+              flex: 0 0 32%;
+              margin-right: @spacing*0.5;
+            }
+            .down {
+              margin-top: @spacing*2;
+            }
+            &:before {
+              content: "";
+              top: -5 * @direction;
+              position: absolute;
+              bottom: @percent;
+              right: 250 * @direction;
+              width: 0 * @width;
+              height: 0 * @height;
+              border-width: 10 * @border;
+              border-style: solid;
+              border-color: transparent;
+              border-bottom-width: 16 * @border;
+              border-bottom-color: currentColor;
+              color: rgba(11, 16, 45, 0.9);
+            }
+          }
+        }
+        &:hover .dropdown {
+          display: block;
+          cursor: pointer;
         }
       }
-    }
-    /*3大模块*/
-    & .case {
-      margin: 3 * @spacing 0 6 * @spacing 0;
-      & .case-main {
-        width: @width-fixed;
-        display: @display-flex;
-        justify-content: space-between;
-        margin: 0 * @spacing auto;
-        & .case-modules {
-          width: @percent / 4;
-          text-align: center;
-          border: 1px solid @color-white;
-          & .case-title {
-            margin-top: 2 * @spacing;
-            font-size: 16 * @font-size;
-            color: rgb(82, 90, 108);
-            font-weight: @font-weight;
+      .solution {
+        position: relative;
+        .pulldown {
+          display: none;
+          position: absolute;
+          min-width: 150 * @width;
+          padding: 2 * @spacing;
+          top: 52 * @direction;
+          left: -50 * @direction;
+          .portion {
+            display: @display-flex;
+            background-color: rgba(11, 16, 45, 0.9);
+            border-radius: 5 * @border;
+            width: 150 * @width;
+            flex: 1;
+            flex-wrap: wrap;
+            padding: 2 * @spacing;
+            border-radius: 5 * @border;
+            .down {
+              margin-top: @spacing*2;
+            }
+            &:before {
+              content: "";
+              top: -5 * @direction;
+              position: absolute;
+              bottom: @percent;
+              right: 100 * @direction;
+              width: 0 * @width;
+              height: 0 * @height;
+              border-width: 10 * @border;
+              border-style: solid;
+              border-color: transparent;
+              border-bottom-width: 16 * @border;
+              border-bottom-color: currentColor;
+              color: rgba(11, 16, 45, 0.9);
+            }
           }
-          & .case-content {
-            font-size: 14 * @font-size;
-            color: rgb(109, 113, 116);
-            line-height: 2 * @line-height;
-            margin-top: 2 * @spacing;
-            text-align: left;
-          }
+        }
+        &:hover .pulldown {
+          display: block;
+          cursor: pointer;
         }
       }
-    }
-    /*列表*/
-    & .list {
-      margin-top: 4 * @spacing;
-      & .line {
-        width: @width-fixed;
-        font-size: 12 * @font-size;
-        height: 50 * @height;
-        border-spacing: 0 * @border;
-        line-height: 3.5 * @line-height;
-        margin: 0 * @spacing auto;
-        vertical-align: middle;
-        border: @border solid rgb(236, 236, 236);
-        & td {
-          width: @percent / 2;
-          text-align: center;
-          vertical-align: middle;
-          border-top: @border solid rgb(236, 236, 236);
-        }
-        & .list-title td {
-          color: rgb(85, 93, 111);
-          font-weight: @font-weight;
-          width: @percent / 2;
-          text-align: center;
-          vertical-align: middle;
-          border-top: @border solid rgb(236, 236, 236);
-          background-color: rgb(248, 248, 249);
-        }
-        & .line-one {
-          text-align: center;
-          & td {
-            color: rgb(123, 129, 143);
-          }
-          &:hover {
-            background-color: rgb(234, 247, 254);
-            cursor: pointer;
-          }
-        }
-        & .line-two {
-          text-align: center;
-          background-color: rgb(248, 248, 249);
-          &:hover {
-            background-color: rgb(234, 247, 254);
-            cursor: pointer;
-          }
-          & td {
-            color: rgb(123, 129, 143);
-          }
-        }
-      }
-    }
-  }
-  /*底部*/
-  & .bottom {
-    width: @percent;
-    height: @percent;
-    min-width: @width-fixed;
-    background-color: @bgcolor-bot;
-    margin-top: 4 * @spacing;
-    & .bottom-main {
-      width: @width-fixed;
-      display: @display-flex;
-      justify-content: space-around;
-      margin: auto;
-      & .bottom-body {
-        margin-top: 6 * @spacing;
+      .resources {
+        position: relative;
         & a:hover {
           color: @color-hover;
           cursor: pointer;
         }
-        & .bottom-title {
-          font-size: 18 * @font-size;
+        .listing {
+          display: none;
+          position: absolute;
+          min-width: 300 * @width;
+          height: 120 * @height;
+          padding: 2 * @spacing;
+          top: 52 * @direction;
+          left: -100 * @direction;
+          .section {
+            display: @display-flex;
+            justify-content: space-around;
+            background-color: rgba(11, 16, 45, 0.9);
+            border-radius: 5 * @border;
+            padding: 2 * @spacing;
+            .document,
+            .sdk {
+              width: 120 * @width;
+            }
+            &:before {
+              content: "";
+              top: -5 * @direction;
+              position: absolute;
+              bottom: @percent;
+              right: 150 * @direction;
+              width: 0 * @width;
+              height: 0 * @height;
+              border-width: 10 * @border;
+              border-style: solid;
+              border-color: transparent;
+              border-bottom-width: 16 * @border;
+              border-bottom-color: currentColor;
+              color: rgba(11, 16, 45, 0.9);
+            }
+          }
+        }
+        &:hover .listing {
+          display: block;
+          cursor: pointer;
+        }
+      }
+    }
+    .logon {
+      font-size: 16 * @font-size;
+      color: @color-white;
+      display: flex;
+      align-items: center;
+      span {
+        color: rgb(131, 134, 150);
+        margin: 0 1 * @spacing;
+      }
+    }
+  }
+  li a {
+    color: @color-white;
+  }
+}
+/*动画区域*/
+.animation {
+  margin: @spacing*0;
+  padding: @spacing*0;
+  .img {
+    width: @percent;
+  }
+}
+/*AI技术体系*/
+.technical {
+  width: @width-fixed;
+  margin: @spacing*0 auto;
+  margin-top: 6 * @spacing;
+    .up {
+      color: rgb(82, 90, 108);
+      font-size: 25 * @font-size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: @font-weight;
+    }
+    .down {
+      color: rgb(85, 88, 103);
+      font-size: 15 * @font-size;
+      margin-top: @spacing;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  /*六个模块*/
+  .modules {
+    margin: @spacing*3 @spacing*5x;
+    width: @width-fixed;
+    margin: 0 * @spacing auto;
+    .up,
+    .down {
+      display: @display-flex;
+      justify-content: space-between;
+      margin-top: 3 * @spacing;
+      .main {
+        width: 370 * @width;
+        height: 150 * @height;
+        box-shadow: 0 0 1 * @spacing rgb(230, 230, 230);
+        padding: 4 * @spacing 2 * @spacing;
+        display: @display-flex;
+        .img {
+          width: 32 * @width;
+          margin-right: @spacing;
+          margin-top: 0.16 * @spacing;
+          opacity: 0.7;
+        }
+        .head {
+          color: rgb(82, 90, 108);
+          font-size: 25 * @font-size;
           font-weight: @font-weight;
-          color: @color-white;
-          margin-bottom: @spacing;
         }
-        & .bottom-content {
+        .content {
+          color: rgb(108, 114, 130);
           font-size: 14 * @font-size;
-          color: rgb(240, 240, 242);
-          line-height: 2.3 * @line-height;
+          margin-top: @spacing;
+          line-height: 2 * @line-height;
         }
       }
-      & .bottom-img {
-        width: 200 * @width;
-        height: 200 * @height;
-        margin: 5 * @spacing 0;
+    }
+  }
+}
+/*AI专业解决方案*/
+.solutions {
+  width: @width-fixed;
+  margin: @spacing*0 auto;
+  margin-top: 6 * @spacing;
+    .up {
+      color: rgb(82, 90, 108);
+      font-size: 25 * @font-size;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: @font-weight;
+    }
+    .down {
+      color: rgb(85, 88, 103);
+      font-size: 15 * @font-size;
+      margin-top: @spacing;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  /*6个活动模块*/
+  .professional {
+    width: @width-fixed;
+    margin: 3 * @spacing auto;
+    display: @display-flex;
+    flex-wrap: wrap;
+    flex: 1;
+    p {
+      color: @color-white;
+    }
+    .modules {
+      flex: 0 0 33%;
+      flex-wrap: wrap;
+      height: 330 * @height;
+      position: relative;
+      border: 1px solid @color-white;
+      overflow: hidden;
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(60, 111, 213, 0.7);
+        .img {
+          transform: translate(0, -3.5 * @spacing);
+          transition: all 0.3s ease 0s;
+        }
+        .part {
+          transform: translate(0, -3.5 * @spacing);
+          transition: all 0.3s ease 0s;
+          .content {
+            display: block;
+          }
+        }
       }
+      .img {
+        width: @percent;
+        position: absolute;
+        z-index: -1 * @z-index;
+        top: -20 * @direction;
+      }
+      .part {
+        z-index: @z-index;
+        .content {
+          display: none;
+          padding: 2 * @spacing;
+        }
+        .head {
+          font-size: 25 * @font-size;
+          text-align: center;
+          padding-top: 13 * @spacing;
+          height: 30 * @height;
+        }
+      }
+    }
+  }
+}
+/*AI服务应用场景*/
+.application {
+  width: @percent;
+  margin-top: 6 * @spacing;
+  .up {
+    margin: @spacing*0 auto;
+    width: @width-fixed;
+    font-size: 25 * @font-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(82, 90, 108);
+    font-weight: @font-weight;
+  }
+  /*6个图标*/
+  .scene {
+    background-image: url("asset/application-scenarios.jpg");
+    background-repeat: no-repeat;
+    background-color: #1f3656;
+    background-position: center;
+    height: 600 * @height;
+    margin-top: 4 * @spacing;
+    .menu {
+      position: relative;
+      width: @width-fixed;
+      height: @percent;
+      margin: 0 * @spacing auto;
+      .main:hover {
+        background-color: rgba(22, 33, 61, 0.8);
+        cursor: pointer;
+        .content {
+          display: block;
+        }
+      }
+      .talk {
+        text-align: right;
+        position: absolute;
+        left: -70 * @direction;
+        top: 50 * @direction;
+        width: @percent / 5;
+        padding: 2 * @spacing;
+        border-radius: 10 * @border;
+      }
+      .finance {
+        text-align: left;
+        position: absolute;
+        left: 695 * @direction;
+        top: 95 * @direction;
+        width: @percent / 5;
+        padding: 2 * @spacing;
+        border-radius: 10 * @border;
+      }
+      .landed {
+        text-align: right;
+        position: absolute;
+        left: 830 * @direction;
+        top: 150 * @direction;
+        width: @percent / 5;
+        padding: 2 * @spacing;
+        border-radius: 10 * @border;
+      }
+      .retail {
+        text-align: left;
+        position: absolute;
+        left: 595 * @direction;
+        top: 300 * @direction;
+        width: @percent / 5;
+        padding: 2 * @spacing;
+        border-radius: 10 * @border;
+      }
+      .education {
+        text-align: right;
+        position: absolute;
+        left: 0 * @direction;
+        top: 395 * @direction;
+        width: @percent / 5;
+        padding: 2 * @spacing;
+        border-radius: 10 * @border;
+      }
+      .collection {
+        text-align: left;
+        position: absolute;
+        left: 965 * @direction;
+        top: 435 * @direction;
+        width: @percent / 5;
+        padding: 2 * @spacing;
+        border-radius: 10 * @border;
+      }
+      li {
+        list-style-type: none;
+      }
+      .head {
+        color: @color-white;
+        font-size: 22 * @font-size;
+      }
+      .content {
+        display: none;
+        font-size: 16 * @font-size;
+        color: @color-white;
+        margin-top: 2 * @spacing;
+        line-height: 2 * @line-height;
+      }
+    }
+  }
+}
+/*AI智能服务的推动者*/
+.promoter {
+  width: @width-fixed;
+  margin: @spacing*0 auto;
+  margin-top: 6 * @spacing;
+  .up {
+    color: rgb(82, 90, 108);
+    font-size: 25 * @font-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: @font-weight;
+  }
+  .down {
+    color: rgb(85, 88, 103);
+    font-size: 15 * @font-size;
+    margin-top: @spacing;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .list {
+    margin-top: 4 * @spacing;
+    .line {
+      width: @width-fixed;
+      font-size: 12 * @font-size;
+      height: 50 * @height;
+      border-spacing: 0 * @border;
+      line-height: 3.5 * @line-height;
+      margin: 0 * @spacing auto;
+      vertical-align: middle;
+      border: @border solid rgb(236, 236, 236);
+      td {
+        width: @percent / 2;
+        text-align: center;
+        vertical-align: middle;
+        border-top: @border solid rgb(236, 236, 236);
+        color: rgb(123, 129, 143);
+      }
+      tr:nth-child(2n) {
+        text-align: center;
+        &:hover {
+          background-color: rgb(234, 247, 254);
+          cursor: pointer;
+        }
+      }
+      tr:nth-child(2n-1) {
+        text-align: center;
+        background-color: rgb(248, 248, 249);
+        &:hover {
+          background-color: rgb(234, 247, 254);
+          cursor: pointer;
+        }
+      }
+      .title td {
+        color: rgb(85, 93, 111);
+        font-weight: @font-weight;
+        width: @percent / 2;
+        text-align: center;
+        vertical-align: middle;
+        border-top: @border solid rgb(236, 236, 236);
+        background-color: rgb(248, 248, 249);
+      }
+    }
+  }
+}
+/*部分用户案例*/
+.instance {
+  width: @width-fixed;
+  margin: @spacing*0 auto;
+  margin-top: 6 * @spacing;
+  .up {
+    color: rgb(82, 90, 108);
+    font-size: 25 * @font-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: @font-weight;
+  }
+
+  /*3大模块*/
+  .case {
+    margin: 3 * @spacing 0 6 * @spacing 0;
+    .main {
+      width: @width-fixed;
+      display: @display-flex;
+      justify-content: space-between;
+      margin: 0 * @spacing auto;
+      .modules {
+        width: @percent / 4;
+        text-align: center;
+        border: 1px solid @color-white;
+        .title {
+          margin-top: 2 * @spacing;
+          font-size: 16 * @font-size;
+          color: rgb(82, 90, 108);
+          font-weight: @font-weight;
+        }
+        .content {
+          font-size: 14 * @font-size;
+          color: rgb(109, 113, 116);
+          line-height: 2 * @line-height;
+          margin-top: 2 * @spacing;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+/*底部*/
+.bottom {
+  width: @percent;
+  height: @percent;
+  min-width: @width-fixed;
+  background-color: #121e30;
+  margin-top: 4 * @spacing;
+  .main {
+    width: @width-fixed;
+    display: @display-flex;
+    justify-content: space-around;
+    margin: auto;
+    .body {
+      margin-top: 6 * @spacing;
+      & a:hover {
+        color: @color-hover;
+        cursor: pointer;
+      }
+      .title {
+        font-size: 18 * @font-size;
+        font-weight: @font-weight;
+        color: @color-white;
+        margin-bottom: @spacing;
+      }
+      .content {
+        font-size: 14 * @font-size;
+        color: rgb(240, 240, 242);
+        line-height: 2.3 * @line-height;
+      }
+    }
+    .img {
+      width: 200 * @width;
+      margin: 5 * @spacing 0;
     }
   }
 }
