@@ -121,4 +121,5 @@ a {
   position: absolute;
   left: 1px;
   border: none;
+  outline: none;
 }

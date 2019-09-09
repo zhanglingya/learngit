@@ -9,3 +9,6 @@ function getKey(){
 function del(){
   document.getElementById("check").value = "";
 };
+$('dropdown').each(function(){
+  this.style='display:none'
+});
