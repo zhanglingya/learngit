@@ -43,6 +43,8 @@ a {
   width: 500px;
   height: 60px;
   font-size: 25px;
+  font-weight: 100;
+  color: #8a8a8a;
   outline: none;
   padding: 0 0 0 50px;
   border: none;
@@ -68,44 +70,45 @@ a {
   color: #eeeeee;
   font-weight: 100;
 }
-.list {
+#list {
   padding: 0;
   margin: 0;
-  text-align: center;
 }
-.list li {
+#list li {
   width: 500px;
   height: 50px;
+  font-size: 25px;
+  font-weight: 100;
+  color: #8a8a8a;
   padding-left: 50px;
-  position: relative;
+  line-height: 50px;
+  text-align: left;
   margin: 0 auto;
   list-style-type: none;
   border-bottom: 1px solid #ededed;
   background-color: white;
-}
-.list li .dropdown {
   position: relative;
 }
-.list li:hover .close {
+#list li:hover .close {
   display: inline-block;
   cursor: pointer;
 }
-.list li .close {
+#list li .close {
   position: absolute;
-  right: 20px;
-  top: 18px;
   width: 15px;
   height: 15px;
+  right: 20px;
+  top: 15px;
   display: none;
 }
-.list li .close:before {
+#list li .close:before {
   transform: rotate(45deg);
 }
-.list li .close:after {
+#list li .close:after {
   transform: rotate(-45deg);
 }
-.list li .close:before,
-.list li .close:after {
+#list li .close:before,
+#list li .close:after {
   position: absolute;
   left: 15px;
   content: " ";
@@ -113,7 +116,7 @@ a {
   width: 2px;
   background-color: #a45f60;
 }
-.list li .check {
+#list li .check {
   width: 500px;
   height: 40px;
   font-size: 15px;
