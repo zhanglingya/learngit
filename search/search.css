@@ -88,11 +88,6 @@ a {
   height: 50px;
   padding-left: 50px;
 }
-#list tr td:hover a {
-  display: inline-block;
-  cursor: pointer;
-}
 a {
-  display: none;
   color: #a45f60;
 }
