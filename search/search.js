@@ -8,14 +8,13 @@ function getKey() {
     var otd = document.createElement("td");
     otd.innerHTML = text.value;
     otr.appendChild(otd);
-    document.getElementById("text").value="";
+    document.getElementById("text").value = "";
     var otd = document.createElement("td");
-    otd.innerHTML='<a href="#">×</a>';
+    otd.innerHTML = '<a href="#">×</a>';
     otr.appendChild(otd);
-    otd.getElementsByTagName('a')[0].onclick=function(){
+    otd.getElementsByTagName("a")[0].onclick = function() {
       otab.tBodies[0].removeChild(this.parentNode.parentNode);
-  }
-  
-  otab.tBodies[0].appendChild(otr);
+    };
+    otab.tBodies[0].appendChild(otr);
   }
 }

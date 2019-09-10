@@ -104,9 +104,14 @@ a {
       width: @width*275;
       height: @height*50;
       padding-left: 5*@spacing;
+      &:hover a{
+        display: inline-block;
+        cursor:pointer; 
+      }
     }
   }
 }
 a{
+  display: none;
   color:rgb(164,95,96);
 }
