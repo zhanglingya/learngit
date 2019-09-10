@@ -33,7 +33,7 @@ a {
   width: 550px;
   padding-top: 63px;
   margin: 0 auto;
-  box-shadow: 0 5px 8px #c8c8c8;
+  box-shadow: 0 3px 3px #dfdfdf;
 }
 .head {
   position: relative;
@@ -50,7 +50,6 @@ a {
   border: none;
   position: absolute;
   left: -1px;
-  border-bottom: 1px solid #ededed;
 }
 .head .text + label {
   position: absolute;
@@ -71,58 +70,24 @@ a {
   font-weight: 100;
 }
 #list {
-  padding: 0;
-  margin: 0;
+  border-collapse: collapse;
 }
-#list li {
+#list tr {
   width: 500px;
   height: 50px;
   font-size: 25px;
   font-weight: 100;
   color: #8a8a8a;
-  padding-left: 50px;
   line-height: 50px;
   text-align: left;
-  margin: 0 auto;
-  list-style-type: none;
-  border-bottom: 1px solid #ededed;
   background-color: white;
-  position: relative;
+  border: 1px solid #ededed;
 }
-#list li:hover .close {
-  display: inline-block;
-  cursor: pointer;
+#list tr td {
+  width: 275px;
+  height: 50px;
+  padding-left: 50px;
 }
-#list li .close {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  right: 20px;
-  top: 15px;
-  display: none;
-}
-#list li .close:before {
-  transform: rotate(45deg);
-}
-#list li .close:after {
-  transform: rotate(-45deg);
-}
-#list li .close:before,
-#list li .close:after {
-  position: absolute;
-  left: 15px;
-  content: " ";
-  height: 20px;
-  width: 2px;
-  background-color: #a45f60;
-}
-#list li .check {
-  width: 500px;
-  height: 40px;
-  font-size: 15px;
-  text-align: center;
-  position: absolute;
-  left: 1px;
-  border: none;
-  outline: none;
+a {
+  color: #a45f60;
 }
