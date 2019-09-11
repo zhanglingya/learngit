@@ -1,7 +1,7 @@
 "use strict";
 var text = document.getElementById('text');
 
-text.addEventListener("keydown",function getKey(){
+text.addEventListener("keydown",function(){
   if (event.keyCode === 13) {
     var table = document.getElementById('list');
 
@@ -14,9 +14,9 @@ text.addEventListener("keydown",function getKey(){
     rank.innerHTML = '<a href="#">×</a>';
     line.appendChild(rank);
 
-    rank.getElementsByTagName('a')[0].onclick = function() {
+    rank.getElementsByTagName('a')[0].addEventListener('click',function(){
       table.tBodies[0].removeChild(this.parentNode.parentNode);
-    };
+    })
     table.tBodies[0].appendChild(line);
 
     document.getElementById('text').value = '';
