@@ -9,18 +9,20 @@
 <body>
     <div class="container">
         <div class="song" id="song">
-            <div class="name"><p>晚安</p></div>
-            <div class="singer"><p>颜人中</p></div>
-            <div class="progress">
-                <progress value="59" max="100">
-                </progress>
+            <div class="name">
+                <p>晚安</p>
             </div>
+            <div class="singer">
+                <p>颜人中</p>
+            </div>
+            <embed src = "asset/颜人中 - 晚安.mp3" hidden = "true" autostart = "false" loop ="false" id="goodnight" class="goodnight">
         </div>
-        <div class="player" id ="player">
+        <div class="player" id="player">
 
-            <a class="cd" id ="cd">
-                <div class="circle"></div>
-            </a>
+            <div>
+                <img src="asset/goodnight.png" class="cd" id="cd"/>
+            </div>
+            <div class="circle" id ="circle"></div>
             <div class="button">
                 <a>
                     <div class="change">
@@ -29,7 +31,7 @@
                 </a>
                 <a>
                     <div class="icon" id="icon">
-                       <!--<img src="asset/play.png" class="play" />--> 
+                        <!--<img src="asset/play.png" class="play" />-->
                     </div>
                 </a>
                 <a>

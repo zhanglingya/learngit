@@ -19,55 +19,50 @@ a {
 }
 .container {
   width: 100%;
+  min-width: 350px;
   height: 1500px;
   background-color: rgb(107, 139, 136);
   padding-top: 200px;
-  position: relative;
 }
 .player {
   width: 350px;
   height: 80px;
   border-radius: 10px;
   background-color: rgb(217, 220, 220);
-  margin:0 auto;
+  margin-left:37.2%;
   display: flex;
-  justify-content: center;
   position: relative;
   box-shadow: 0 20px 20px rgb(41, 53, 52);
-}
-.cd {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  position: absolute;
-  top: -20px;
-  left: 20px;
-  background-image: url(asset/goodnight.png);
-  background-size: 100%;
-  &:hover {
+  .cd {
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    position: absolute;
     top: -20px;
     left: 20px;
     background-image: url(asset/goodnight.png);
     background-size: 100%;
+    position: relative;
   }
   .circle {
+    position: absolute;
+    z-index: 1;
+    top:10px;
+    left:50px;
     width: 15px;
     height: 15px;
-    background-color: rgb(217, 220, 220);
-    margin: 27px 0 0 23px;
+    background-color: rgba(217, 220, 220,0.9);
     border-radius: 50%;
   }
 }
+
 .button {
-  margin-left: 100px;
+  margin-left: 120px;
+  margin-top:15px;
   width: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
   .change {
     width: 50px;
     height: 50px;
@@ -122,12 +117,11 @@ a {
 .song {
   width: 330px;
   height: 70px;
-  margin:0 auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background-color: rgba(218, 220, 220,0.7);
   position: absolute;
-  left:525px;
+  left:38%;
   display: none;
   p{
       display: inline-block;
@@ -141,7 +135,9 @@ a {
   .singer{
     font-size: 10px;
   }
-  .progress{
+  .goodnight{
+    width: 200px;
+    height: 5px;
     padding-left: 100px;
   }
 }
