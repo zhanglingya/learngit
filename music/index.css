@@ -92,19 +92,32 @@ a {
   width: 50px;
   height: 50px;
   position: relative;
+  margin-left: 10px;
   border-radius: 10px;
   background-color: #d9dcdc;
   background-image: url(asset/play.png);
   background-size: 45px;
   background-position: 2px 2px;
-  /*.play {
-      width: 40px;
-      position: absolute;
-      top: 3px;
-      left: 6px;
-    }*/
 }
 .button .icon:hover {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #979b9b;
+  cursor: url(asset/cur.png), pointer;
+}
+.button .menu {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-radius: 10px;
+  background-color: #d9dcdc;
+  background-image: url(asset/stop.png);
+  background-size: 45px;
+  background-position: 2px 2px;
+  display: none;
+}
+.button .menu:hover {
   width: 50px;
   height: 50px;
   border-radius: 10px;
