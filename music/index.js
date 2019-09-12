@@ -19,12 +19,12 @@ icon.addEventListener("click", function() {
   menu.style.left = "-10px";
 
   //点击播放按钮图片变大
-  cd.style.height = cd.height * 1.2 + "px";
-  cd.style.width = cd.width * 1.2 + "px";
-  circle.style.height = circle.height * 2 + "px";
-  circle.style.width = circle.width * 2 + "px";
-  circle.style.top = "17px";
-  circle.style.left = "57px";
+  cd.style.height = "90px";
+  cd.style.width = "90px";
+  circle.style.height =  "20px";
+  circle.style.width = "20px";
+  circle.style.top = "15px";
+  circle.style.left = "55px";
 
   //点击播放按钮图片一直旋转
   var rotate = 0;
@@ -50,6 +50,8 @@ menu.addEventListener("click", function() {
   //恢复图片原始状态
   cd.style.height = "75px";
   cd.style.width = "75px";
+  circle.style.height =  "15px";
+  circle.style.width = "15px";
   circle.style.top = "10px";
   circle.style.left = "50px";
   //清除定时器
