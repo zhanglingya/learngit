@@ -1,3 +1,5 @@
+@background-color:rgb(217, 220, 220);
+
 body {
   padding: 0;
   margin: 0 auto;
@@ -17,6 +19,9 @@ p {
 a {
   text-decoration: none;
 }
+
+
+
 .container {
   width: 100%;
   min-width: 350px;
@@ -24,11 +29,13 @@ a {
   background-color: rgb(107, 139, 136);
   padding-top: 200px;
 }
+
+
 .player {
   width: 350px;
   height: 80px;
   border-radius: 10px;
-  background-color: rgb(217, 220, 220);
+  background-color: @background-color;
   margin-left:37.2%;
   display: flex;
   position: relative;
@@ -53,80 +60,82 @@ a {
     background-color: rgba(217, 220, 220,0.9);
     border-radius: 50%;
   }
+  .button {
+    margin-left: 120px;
+    margin-top:15px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    .change {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      border-radius: 10px;
+      background-color: @background-color;
+      .upper {
+        width: 26px;
+        position: absolute;
+        top: 11px;
+        left: 10px;
+      }
+  
+      .lower {
+        width: 26px;
+        position: absolute;
+        top: 11px;
+        left: 12px;
+      }
+      &:hover {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: rgb(151, 155, 155);
+        cursor: url(asset/cur.png), pointer;
+      }
+    }
+    .icon {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      margin-left:10px;
+      border-radius: 10px;
+      background-color: @background-color;
+      background-image: url(asset/play.png);
+      background-size: 45px;
+      background-position: 2px 2px;
+      &:hover {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: rgb(151, 155, 155);
+        cursor: url(asset/cur.png), pointer;
+      }
+    }
+    .menu{
+      width: 50px;
+      height: 50px;
+      position: relative;
+      border-radius: 10px;
+      background-color:@background-color;
+      background-image: url(asset/stop.png);
+      background-size: 45px;
+      background-position: 2px 2px;
+      display: none;
+      &:hover {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: rgb(151, 155, 155);
+        cursor: url(asset/cur.png), pointer;
+      }
+    }
+  }
+  
 }
 
-.button {
-  margin-left: 120px;
-  margin-top:15px;
-  width: 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  .change {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    border-radius: 10px;
-    background-color: rgb(217, 220, 220);
-    .upper {
-      width: 26px;
-      position: absolute;
-      top: 11px;
-      left: 10px;
-    }
 
-    .lower {
-      width: 26px;
-      position: absolute;
-      top: 11px;
-      left: 12px;
-    }
-    &:hover {
-      width: 50px;
-      height: 50px;
-      border-radius: 10px;
-      background-color: rgb(151, 155, 155);
-      cursor: url(asset/cur.png), pointer;
-    }
-  }
-  .icon {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    margin-left:10px;
-    border-radius: 10px;
-    background-color: rgb(217, 220, 220);
-    background-image: url(asset/play.png);
-    background-size: 45px;
-    background-position: 2px 2px;
-    &:hover {
-      width: 50px;
-      height: 50px;
-      border-radius: 10px;
-      background-color: rgb(151, 155, 155);
-      cursor: url(asset/cur.png), pointer;
-    }
-  }
-  .menu{
-    width: 50px;
-    height: 50px;
-    position: relative;
-    border-radius: 10px;
-    background-color: rgb(217, 220, 220);
-    background-image: url(asset/stop.png);
-    background-size: 45px;
-    background-position: 2px 2px;
-    display: none;
-    &:hover {
-      width: 50px;
-      height: 50px;
-      border-radius: 10px;
-      background-color: rgb(151, 155, 155);
-      cursor: url(asset/cur.png), pointer;
-    }
-  }
-}
 .song {
   width: 330px;
   height:70px;
@@ -148,25 +157,26 @@ a {
   .singer{
     font-size: 10px;
   }
+  .progress{
+    width: 65%;
+    height: 6px;
+    border-radius:7px;
+    margin-left: 100px;
+    margin-top: 10px;
+    background: @background-color;
+    .loader {
+      height: 100%;
+      /*进度条长度*/
+      width: 0%;
+      background:rgb(107, 139, 136) ;
+      border-radius:7px;
+      box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.2);
+      animation: loader 1s linear;
+    }
+  }
+  
   
 }
 
-.progress{
-  width: 225px;
-  height: 6px;
-  border-radius:7px;
-  margin-left: 100px;
-  margin-top: 10px;
-  background: rgb(217, 220, 220);
-  .loader {
-    height: 100%;
-    /*进度条长度*/
-    width: 0%;
-    background:rgb(107, 139, 136) ;
-    border-radius:7px;
-    box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.2);
-    animation: loader 1s linear;
-  }
-}
 
 

@@ -53,7 +53,7 @@ a {
   background-color: rgba(217, 220, 220, 0.9);
   border-radius: 50%;
 }
-.button {
+.player .button {
   margin-left: 120px;
   margin-top: 15px;
   width: 200px;
@@ -62,33 +62,33 @@ a {
   align-items: center;
   position: absolute;
 }
-.button .change {
+.player .button .change {
   width: 50px;
   height: 50px;
   position: relative;
   border-radius: 10px;
   background-color: #d9dcdc;
 }
-.button .change .upper {
+.player .button .change .upper {
   width: 26px;
   position: absolute;
   top: 11px;
   left: 10px;
 }
-.button .change .lower {
+.player .button .change .lower {
   width: 26px;
   position: absolute;
   top: 11px;
   left: 12px;
 }
-.button .change:hover {
+.player .button .change:hover {
   width: 50px;
   height: 50px;
   border-radius: 10px;
   background-color: #979b9b;
   cursor: url(asset/cur.png), pointer;
 }
-.button .icon {
+.player .button .icon {
   width: 50px;
   height: 50px;
   position: relative;
@@ -99,14 +99,14 @@ a {
   background-size: 45px;
   background-position: 2px 2px;
 }
-.button .icon:hover {
+.player .button .icon:hover {
   width: 50px;
   height: 50px;
   border-radius: 10px;
   background-color: #979b9b;
   cursor: url(asset/cur.png), pointer;
 }
-.button .menu {
+.player .button .menu {
   width: 50px;
   height: 50px;
   position: relative;
@@ -117,7 +117,7 @@ a {
   background-position: 2px 2px;
   display: none;
 }
-.button .menu:hover {
+.player .button .menu:hover {
   width: 50px;
   height: 50px;
   border-radius: 10px;
@@ -146,15 +146,15 @@ a {
 .song .singer {
   font-size: 10px;
 }
-.progress {
-  width: 225px;
+.song .progress {
+  width: 65%;
   height: 6px;
   border-radius: 7px;
   margin-left: 100px;
   margin-top: 10px;
   background: #d9dcdc;
 }
-.progress .loader {
+.song .progress .loader {
   height: 100%;
   /*进度条长度*/
   width: 0%;

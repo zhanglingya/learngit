@@ -59,7 +59,7 @@ icon.addEventListener('click', function() {
 
   //拖动进度条
   progress.addEventListener('click', function(e) {
-    var rate = e.offsetX / 225;
+    var rate = e.offsetX / progress.offsetWidth;
     music.currentTime = music.duration * rate;
     show();
   });
